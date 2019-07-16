@@ -1,17 +1,19 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import 'normalize.css';
+import '../../styles/base.scss';
 
+import { Root, MainContainer } from './styled-components';
 import Header from '../Header';
 
 const Layout = ({ children }) => (
-  <Fragment>
-    <Header />
-    <div className="home">
+  <Root>
+    <MainContainer>
+      <Header />
       <main>{children}</main>
-      <footer>An awesome footer</footer>
-    </div>
-  </Fragment>
+    </MainContainer>
+    <footer>An awesome footer</footer>
+  </Root>
 );
 
 Layout.propTypes = {

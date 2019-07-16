@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Ti-No-Ni Desentupimentos`,
-    description: `O site oficial da Ti-no-ni Desentupimentos`,
+    title: `Tí-No-Ní Esgotos`,
+    description: `O site oficial da Ti-no-ni esgotos`,
     author: `@marcoescaleira`,
   },
   plugins: [
@@ -13,6 +13,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-styled-components`,
     },
@@ -27,7 +28,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo.jpg`, // This path is relative to the root of the site.
       },
     },
   ],

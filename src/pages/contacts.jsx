@@ -3,11 +3,11 @@ import React from 'react';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
 
-const IndexPage = () => (
+const Contacts = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Homepage</h1>
+    <SEO title="Contactos" />
+    <h1>Página de Contatos</h1>
   </Layout>
 );
 
-export default IndexPage;
+export default Contacts;
