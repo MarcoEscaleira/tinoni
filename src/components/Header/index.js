@@ -15,11 +15,11 @@ const Header = () => {
 
   return (
     <header>
-      <Div>
+      <div>
         <h1>
           <Link to="/">{data.site.siteMetadata.title}</Link>
         </h1>
-      </Div>
+      </div>
     </header>
   );
 };
