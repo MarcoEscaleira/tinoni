@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { HeaderWrapper, Title, Navigation, Menu, MenuLink } from './styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAlignJustify, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { HeaderWrapper, Title, Navigation, MenuCheckbox, ShowMenu, HideMenu, Menu, MenuLink } from './styled-components';
 
 const Header = () => {
+  const [responsive, setResponsive] = useState(false);
+  
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -18,12 +22,18 @@ const Header = () => {
     <HeaderWrapper>
       <Title>{title[0]}<span>{title[1]}</span></Title>
       <Navigation>
-        <Menu>
+        <Menu responsive={responsive}>
           <MenuLink to="/">Home</MenuLink>
           <MenuLink to="/services">Serviços</MenuLink>
           <MenuLink to="/whereWeAre">Onde estamos</MenuLink>
           <MenuLink to="/contacts">Contactos</MenuLink>
+          <HideMenu onClick={() => setResponsive(false)}>
+            <FontAwesomeIcon icon={faTimes} />
+          </HideMenu>
         </Menu>
+        <ShowMenu onClick={() => setResponsive(true)}>
+          <FontAwesomeIcon icon={faAlignJustify} />
+        </ShowMenu>
       </Navigation>
     </HeaderWrapper>
   );

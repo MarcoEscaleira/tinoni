@@ -4,6 +4,7 @@ export const Root = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #eeeeee;
 `;
 
 export const MainContainer = styled.div`
