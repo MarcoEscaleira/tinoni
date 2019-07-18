@@ -77,6 +77,7 @@ export const Navigation = styled.nav`
 
 export const ShowMenu = styled.button`
   ${responsiveButtonStyles};
+  color: #101010;
 
   &:hover {
     color: #e42024;
@@ -105,12 +106,16 @@ export const HideMenu = styled.button`
 
 export const Menu = styled.ul`
   display: flex;
+  max-width: 70rem;
+  flex: 1;
+  justify-content: space-evenly;
   font-family: 'Lato', sans-serif;
 
   @media (max-width: 45rem) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20rem 0;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -124,25 +129,27 @@ export const Menu = styled.ul`
 export const MenuLink = styled(Link).attrs(({ to }) => ({
   to,
   activeStyle: {
-    borderLeft: '0.3rem solid #e42024',
-    paddingLeft: '1rem',
+    borderBottom: '0.3rem solid #e42024',
   },
 }))`
   color: #fff;
   white-space: nowrap;
-  text-decoration: underline;
+  text-transform: uppercase;
   letter-spacing: 0.1rem;
-  width: 11rem;
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 1rem;
   text-align: center;
-  line-height: ${headerDesktopHeight};
-  height: ${headerDesktopHeight};
-  margin-right: 2rem;
 
-  &:last-of-type {
-    margin-right: 0;
+  &:hover {
+    color: #999;
   }
 
   @media (min-width: 45rem) {
     color: #090909;
+    padding-bottom: 0;
+    justify-content: center;
+    align-items: center;
   }
 `;
