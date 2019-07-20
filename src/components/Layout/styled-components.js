@@ -13,4 +13,5 @@ export const MainContainer = styled.div`
   flex-shrink: 0;
   flex-grow: 1;
   height: 100%;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
 `;

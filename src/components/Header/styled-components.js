@@ -32,7 +32,7 @@ export const Title = styled(Link).attrs(() => ({
   to: '/',
 }))`
   font-family: 'Lato', sans-serif;
-  color: #e42024;
+  color: #fe5000;
   font-weight: 700;
   font-size: 2.1rem;
   text-transform: uppercase;
@@ -42,9 +42,9 @@ export const Title = styled(Link).attrs(() => ({
   min-width: 12rem;
 
   &:hover {
-    color: #101010;
+    color: #54585a;
     & > span {
-      color: #e42024;
+      color: #fe5000;
     }
   }
 
@@ -54,7 +54,7 @@ export const Title = styled(Link).attrs(() => ({
     font-size: 1.3rem;
     text-transform: none;
     align-self: flex-end;
-    color: #101010;
+    color: #54585a;
     margin-left: 1rem;
     letter-spacing: 0.1rem;
   }
@@ -80,7 +80,7 @@ export const ShowMenu = styled.button`
   color: #101010;
 
   &:hover {
-    color: #e42024;
+    color: #fe5000;
   }
 
   @media (min-width: 45rem) {
@@ -96,7 +96,7 @@ export const HideMenu = styled.button`
   right: 2rem;
 
   &:hover {
-    color: #e42024;
+    color: #fe5000;
   }
 
   @media (min-width: 45rem) {
@@ -119,7 +119,7 @@ export const Menu = styled.ul`
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: #999;
+    background-color: #54585a;
     right: ${({ responsive }) => (responsive ? '0' : '-100%')};
     top: 0;
     transition: 0.7s;
@@ -129,7 +129,7 @@ export const Menu = styled.ul`
 export const MenuLink = styled(Link).attrs(({ to }) => ({
   to,
   activeStyle: {
-    borderBottom: '0.3rem solid #e42024',
+    borderBottom: '0.3rem solid #FE5000',
   },
 }))`
   color: #fff;
@@ -143,7 +143,7 @@ export const MenuLink = styled(Link).attrs(({ to }) => ({
   text-align: center;
 
   &:hover {
-    color: #999;
+    color: #54585a;
   }
 
   @media (min-width: 45rem) {

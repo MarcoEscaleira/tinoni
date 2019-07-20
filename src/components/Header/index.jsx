@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAlignJustify, faTimes } from '@fortawesome/free-solid-svg-icons';
 import {
   HeaderWrapper,
   Title,
@@ -11,6 +10,7 @@ import {
   Menu,
   MenuLink,
 } from './styled-components';
+import MenuPages from '../pages';
 
 const Header = () => {
   const [responsive, setResponsive] = useState(false);
@@ -34,16 +34,15 @@ const Header = () => {
       </Title>
       <Navigation>
         <Menu responsive={responsive}>
-          <MenuLink to="/">Home</MenuLink>
-          <MenuLink to="/services">Serviços</MenuLink>
-          <MenuLink to="/whereWeAre">Onde estamos</MenuLink>
-          <MenuLink to="/contacts">Contactos</MenuLink>
+          {MenuPages.map(page => (
+            <MenuLink key={page.path} to={page.path}>{page.name}</MenuLink>
+          ))}
           <HideMenu onClick={() => setResponsive(false)}>
-            <FontAwesomeIcon icon={faTimes} />
+            <FontAwesomeIcon icon="times" />
           </HideMenu>
         </Menu>
         <ShowMenu onClick={() => setResponsive(true)}>
-          <FontAwesomeIcon icon={faAlignJustify} />
+          <FontAwesomeIcon icon="align-justify" />
         </ShowMenu>
       </Navigation>
     </HeaderWrapper>
