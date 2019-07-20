@@ -1,8 +1,9 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import '../../styles/settings.scss';
 
-const headerDesktopHeight = '7rem';
+const headerDesktopHeight = '6rem';
 const headerMobileHeight = '5rem';
 
 const responsiveButtonStyles = css`
@@ -28,7 +29,9 @@ export const HeaderWrapper = styled.header`
   }
 `;
 
-export const Title = styled(Link).attrs(() => ({
+export const Title = styled(AniLink).attrs(() => ({
+  paintDrip: true,
+  hex: '#fe5000',
   to: '/',
 }))`
   font-family: 'Lato', sans-serif;
@@ -60,11 +63,11 @@ export const Title = styled(Link).attrs(() => ({
   }
 
   @media (min-width: 45rem) {
-    font-size: 3rem;
-    min-width: 16.8rem;
+    font-size: 2.5rem;
+    min-width: 14rem;
 
     & > span {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
   }
 `;
@@ -77,7 +80,7 @@ export const Navigation = styled.nav`
 
 export const ShowMenu = styled.button`
   ${responsiveButtonStyles};
-  color: #101010;
+  color: #54585a;
 
   &:hover {
     color: #fe5000;
@@ -144,6 +147,10 @@ export const MenuLink = styled(Link).attrs(({ to }) => ({
 
   &:hover {
     color: #54585a;
+  }
+
+  &:active {
+    color: #fe5000;
   }
 
   @media (min-width: 45rem) {

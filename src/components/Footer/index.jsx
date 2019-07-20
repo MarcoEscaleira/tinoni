@@ -1,6 +1,16 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FooterWrapper, InfoWrapper, Menu, MenuLink, Copyright, SocialWrapper, PhoneWrapper, PhoneNumber, FacebookLink} from './styled-components';
+import {
+  FooterWrapper,
+  InfoWrapper,
+  Menu,
+  MenuLink,
+  Copyright,
+  SocialWrapper,
+  PhoneWrapper,
+  PhoneNumber,
+  FacebookLink,
+} from './styled-components';
 import MenuPages from '../pages';
 
 const Footer = () => {
@@ -9,7 +19,9 @@ const Footer = () => {
       <InfoWrapper>
         <Menu>
           {MenuPages.map(page => (
-            <MenuLink key={page.path} to={page.path}>{page.name}</MenuLink>
+            <MenuLink key={page.path} to={page.path}>
+              {page.name}
+            </MenuLink>
           ))}
         </Menu>
         <Copyright>
@@ -21,7 +33,7 @@ const Footer = () => {
           <PhoneNumber href="tel:+351913844344">913 844 344</PhoneNumber>
         </PhoneWrapper>
         <FacebookLink>
-          <FontAwesomeIcon icon={["fab", "facebook"]} />
+          <FontAwesomeIcon icon={['fab', 'facebook']} />
         </FacebookLink>
       </SocialWrapper>
     </FooterWrapper>

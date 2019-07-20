@@ -35,7 +35,9 @@ const Header = () => {
       <Navigation>
         <Menu responsive={responsive}>
           {MenuPages.map(page => (
-            <MenuLink key={page.path} to={page.path}>{page.name}</MenuLink>
+            <MenuLink key={page.path} to={page.path}>
+              {page.name}
+            </MenuLink>
           ))}
           <HideMenu onClick={() => setResponsive(false)}>
             <FontAwesomeIcon icon="times" />
