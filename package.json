@@ -43,7 +43,11 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
     "pretty-quick": "^1.11.1",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.8.0"
   },
   "keywords": [
     "gatsby"
@@ -56,9 +60,10 @@
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "lint:js": "eslint src -c .eslintrc.js --ext js,jsx",
+    "lint:css": "stylelint './src/**/*.js'",
     "lintPretty": "pretty-quick",
     "lint": "run-p --print-label lint:*",
-    "pre-commit-hook": "run-s \"lintPretty\" \"lint:js --fix\""
+    "pre-commit-hook": "run-s \"lintPretty\" \"lint:js --fix\" \"lint:css\""
   },
   "husky": {
     "hooks": {

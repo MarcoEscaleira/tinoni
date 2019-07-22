@@ -44,13 +44,6 @@ export const Title = styled(AniLink).attrs(() => ({
   justify-content: center;
   min-width: 12rem;
 
-  &:hover {
-    color: #54585a;
-    & > span {
-      color: #fe5000;
-    }
-  }
-
   & > span {
     font-family: 'Roboto Cn', sans-serif;
     font-weight: 300;
@@ -60,6 +53,13 @@ export const Title = styled(AniLink).attrs(() => ({
     color: #54585a;
     margin-left: 1rem;
     letter-spacing: 0.1rem;
+  }
+
+  &:hover {
+    color: #54585a;
+    & > span {
+      color: #fe5000;
+    }
   }
 
   @media (min-width: 45rem) {
