@@ -8,10 +8,14 @@ import Header from '../Header';
 import Footer from '../Footer';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faAlignJustify, faTimes } from '@fortawesome/free-solid-svg-icons';
+import {
+  faAlignJustify,
+  faTimes,
+  faPhone,
+} from '@fortawesome/free-solid-svg-icons';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 
-library.add(faAlignJustify, faTimes, faFacebook);
+library.add(faAlignJustify, faTimes, faFacebook, faPhone);
 
 const Layout = ({ children }) => (
   <Root>

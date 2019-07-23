@@ -1,10 +1,12 @@
 import React, { Fragment, useState } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import logoPath from '../../images/logo.png';
 import TopMessage from '../TopMessage';
+
 import {
   HeaderWrapper,
-  Title,
+  LogoWrapper,
+  Logo,
   Navigation,
   ShowMenu,
   HideMenu,
@@ -16,25 +18,13 @@ import MenuPages from '../pages';
 const Header = () => {
   const [responsive, setResponsive] = useState(false);
 
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-  const title = data.site.siteMetadata.title.split(' ');
-
   return (
     <Fragment>
       <TopMessage />
       <HeaderWrapper>
-        <Title>
-          {title[0]}
-          <span>{title[1]}</span>
-        </Title>
+        <LogoWrapper>
+          <Logo src={logoPath} />
+        </LogoWrapper>
         <Navigation>
           <Menu responsive={responsive}>
             {MenuPages.map(page => (

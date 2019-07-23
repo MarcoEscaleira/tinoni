@@ -29,53 +29,40 @@ export const HeaderWrapper = styled.header`
   }
 `;
 
-export const Title = styled(AniLink).attrs(() => ({
+export const LogoWrapper = styled(AniLink).attrs(() => ({
   paintDrip: true,
   hex: '#fe5000',
   to: '/',
 }))`
-  font-family: 'Lato', sans-serif;
-  color: #fe5000;
-  font-weight: 700;
-  font-size: 2.1rem;
-  text-transform: uppercase;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  min-width: 12rem;
+  align-items: center;
 
-  & > span {
-    font-family: 'Roboto Cn', sans-serif;
-    font-weight: 300;
-    font-size: 1.3rem;
-    text-transform: none;
-    align-self: flex-end;
-    color: #54585a;
-    margin-left: 1rem;
-    letter-spacing: 0.1rem;
+  @media (max-width: 45rem) {
+    flex: 1;
+    padding-left: 2.6rem;
   }
+`;
 
-  &:hover {
-    color: #54585a;
-    & > span {
-      color: #fe5000;
-    }
-  }
+export const Logo = styled.img.attrs(({ src }) => ({
+  src,
+}))`
+  width: 5.5rem;
+  height: 4.8rem;
 
   @media (min-width: 45rem) {
-    font-size: 2.5rem;
-    min-width: 14rem;
-
-    & > span {
-      font-size: 1.5rem;
-    }
+    width: 6rem;
+    height: 5.7rem;
   }
 `;
 
 export const Navigation = styled.nav`
-  flex: 1;
   display: flex;
   justify-content: flex-end;
+
+  @media (min-width: 45rem) {
+    flex: 1;
+  }
 `;
 
 export const ShowMenu = styled.button`
@@ -146,10 +133,6 @@ export const MenuLink = styled(Link).attrs(({ to }) => ({
   text-align: center;
 
   &:hover {
-    color: #54585a;
-  }
-
-  &:active {
     color: #fe5000;
   }
 
