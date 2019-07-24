@@ -24,7 +24,7 @@ export const HeaderWrapper = styled.header`
   height: ${headerMobileHeight};
   box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.2);
 
-  @media (min-width: 45rem) {
+  @media (min-width: 52rem) {
     height: ${headerDesktopHeight};
   }
 `;
@@ -38,7 +38,7 @@ export const LogoWrapper = styled(AniLink).attrs(() => ({
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 45rem) {
+  @media (max-width: 52rem) {
     flex: 1;
     padding-left: 2.6rem;
   }
@@ -47,12 +47,12 @@ export const LogoWrapper = styled(AniLink).attrs(() => ({
 export const Logo = styled.img.attrs(({ src }) => ({
   src,
 }))`
-  width: 5.5rem;
-  height: 4.8rem;
+  width: 5.4rem;
+  height: 4.6rem;
 
-  @media (min-width: 45rem) {
+  @media (min-width: 52rem) {
     width: 6rem;
-    height: 5.7rem;
+    height: 5.6rem;
   }
 `;
 
@@ -60,7 +60,7 @@ export const Navigation = styled.nav`
   display: flex;
   justify-content: flex-end;
 
-  @media (min-width: 45rem) {
+  @media (min-width: 52rem) {
     flex: 1;
   }
 `;
@@ -73,7 +73,7 @@ export const ShowMenu = styled.button`
     color: #fe5000;
   }
 
-  @media (min-width: 45rem) {
+  @media (min-width: 52rem) {
     display: none;
   }
 `;
@@ -89,7 +89,7 @@ export const HideMenu = styled.button`
     color: #fe5000;
   }
 
-  @media (min-width: 45rem) {
+  @media (min-width: 52rem) {
     display: none;
   }
 `;
@@ -101,7 +101,7 @@ export const Menu = styled.ul`
   justify-content: space-evenly;
   font-family: 'Lato', sans-serif;
 
-  @media (max-width: 45rem) {
+  @media (max-width: 52rem) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -136,7 +136,7 @@ export const MenuLink = styled(Link).attrs(({ to }) => ({
     color: #fe5000;
   }
 
-  @media (min-width: 45rem) {
+  @media (min-width: 52rem) {
     color: #090909;
     padding-bottom: 0;
     justify-content: center;

@@ -12,10 +12,12 @@ import {
   faAlignJustify,
   faTimes,
   faPhone,
+  faClock,
 } from '@fortawesome/free-solid-svg-icons';
+import { faCalendar } from '@fortawesome/free-regular-svg-icons';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 
-library.add(faAlignJustify, faTimes, faFacebook, faPhone);
+library.add(faAlignJustify, faTimes, faFacebook, faPhone, faClock, faCalendar);
 
 const Layout = ({ children }) => (
   <Root>
