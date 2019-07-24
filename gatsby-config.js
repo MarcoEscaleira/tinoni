@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Tí-No-Ní Esgotos`,
-    description: `O site oficial da Ti-no-ni esgotos`,
+    description: `Site oficial Ti-no-ni esgotos`,
     author: `@marcoescaleira`,
   },
   plugins: [

@@ -6,6 +6,7 @@ import TopMessage from '../TopMessage';
 import {
   HeaderWrapper,
   LogoWrapper,
+  LogoLink,
   Logo,
   Navigation,
   ShowMenu,
@@ -23,7 +24,9 @@ const Header = () => {
       <TopMessage />
       <HeaderWrapper>
         <LogoWrapper>
-          <Logo src={logoPath} />
+          <LogoLink to="/">
+            <Logo src={logoPath} />
+          </LogoLink>
         </LogoWrapper>
         <Navigation>
           <Menu responsive={responsive}>

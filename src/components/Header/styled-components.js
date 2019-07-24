@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
-import '../../styles/settings.scss';
 
 const headerDesktopHeight = '6rem';
 const headerMobileHeight = '5rem';
@@ -29,11 +28,7 @@ export const HeaderWrapper = styled.header`
   }
 `;
 
-export const LogoWrapper = styled(AniLink).attrs(() => ({
-  paintDrip: true,
-  hex: '#fe5000',
-  to: '/',
-}))`
+export const LogoWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,6 +37,14 @@ export const LogoWrapper = styled(AniLink).attrs(() => ({
     flex: 1;
     padding-left: 2.6rem;
   }
+`;
+
+export const LogoLink = styled(AniLink).attrs(({ to }) => ({
+  paintDrip: true,
+  hex: '#fe5000',
+  to,
+}))`
+  outline: none;
 `;
 
 export const Logo = styled.img.attrs(({ src }) => ({
