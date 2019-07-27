@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import { slideInDown } from 'react-animations';
 
-import homePath from '../images/homepage.jpg';
+import homePath from '../../images/homepage.jpg';
 
 const slideInDownAnimation = keyframes`${slideInDown}`;
 
@@ -27,6 +27,7 @@ export const LandingText = styled.p`
   font-family: 'Roboto', Arial, sans-serif;
   font-weight: 300;
   font-size: 2.5rem;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 1);
   color: #ff9f58;
   text-align: center;
   word-wrap: break-word;

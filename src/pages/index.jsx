@@ -3,7 +3,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
-import { Landing, LandingText } from './index-styled-components';
+import { Landing, LandingText } from '../styles/pages/index';
 
 const IndexPage = () => {
   return (
