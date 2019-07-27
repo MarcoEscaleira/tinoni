@@ -17,7 +17,7 @@ function SEO({ description, lang, meta, title }) {
           }
         }
       }
-    `,
+    `
   );
 
   const metaDescription = description || siteMetadata.description;

@@ -59,6 +59,10 @@ export const Title = styled.a.attrs(({ href }) => ({
     font-size: 2rem;
   }
 
+  &:hover {
+    color: #ffdcb0;
+  }
+
   @media (min-width: 45rem) {
     font-size: 2rem;
   }

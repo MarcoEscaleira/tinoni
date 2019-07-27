@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import 'normalize.css';
 import '../../styles/base.scss';
 
-import { Root, MainContainer } from './styled-components';
+import { Root, MainContainer, Content } from './styled-components';
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -13,17 +13,28 @@ import {
   faTimes,
   faPhone,
   faClock,
+  faChevronLeft,
+  faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import { faCalendar } from '@fortawesome/free-regular-svg-icons';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 
-library.add(faAlignJustify, faTimes, faFacebook, faPhone, faClock, faCalendar);
+library.add(
+  faAlignJustify,
+  faTimes,
+  faFacebook,
+  faPhone,
+  faClock,
+  faCalendar,
+  faChevronLeft,
+  faChevronRight
+);
 
 const Layout = ({ children }) => (
   <Root>
     <MainContainer>
       <Header />
-      <main>{children}</main>
+      <Content>{children}</Content>
     </MainContainer>
     <Footer />
   </Root>

@@ -25,6 +25,7 @@
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-animations": "^1.0.0",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1"
   },
@@ -59,11 +60,12 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "format": "prettier --write src/**/*.{js,jsx} src/**/**/*.{js,jsx}",
     "lint:js": "eslint src -c .eslintrc.js --ext js,jsx",
     "lint:css": "stylelint './src/**/*.js'",
     "lintPretty": "pretty-quick",
     "lint": "run-p --print-label lint:*",
-    "pre-commit-hook": "run-s \"lintPretty\" \"lint:js --fix\" \"lint:css\""
+    "pre-commit-hook": "run-s \"format\" \"lintPretty\" \"lint:js --fix\" \"lint:css\""
   },
   "husky": {
     "hooks": {
