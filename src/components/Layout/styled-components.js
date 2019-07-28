@@ -20,6 +20,7 @@ export const Content = styled.main`
   width: 100%;
   flex: 1;
   padding: 1rem;
+  position: relative;
   display: flex;
   flex-direction: column;
 `;

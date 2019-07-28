@@ -1,4 +1,8 @@
-import styled from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
+import { slideInRight, slideOutUp } from 'react-animations';
+
+const slideInAnimation = keyframes`${slideInRight}`;
+const rollOutAnimation = keyframes`${slideOutUp}`;
 
 export const MessageWrapper = styled.section`
   position: relative;
@@ -9,6 +13,11 @@ export const MessageWrapper = styled.section`
   width: 100%;
   height: 7rem;
   background-color: #fe5000;
+  ${({ animate }) =>
+    animate &&
+    css`
+      animation: 1s ${rollOutAnimation};
+    `}
 
   @media (min-width: 50rem) {
     flex-direction: row;
@@ -57,6 +66,7 @@ export const Title = styled.a.attrs(({ href }) => ({
   > span {
     padding-left: 1rem;
     font-size: 2rem;
+    animation: 1s ${slideInAnimation};
   }
 
   &:hover {

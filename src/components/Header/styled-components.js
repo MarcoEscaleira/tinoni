@@ -110,6 +110,7 @@ export const Menu = styled.ul`
     justify-content: center;
     padding: 20rem 0;
     position: fixed;
+    z-index: 9999;
     width: 100%;
     height: 100%;
     background-color: #54585a;

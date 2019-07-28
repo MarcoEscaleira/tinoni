@@ -2,7 +2,7 @@ import React from 'react';
 
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
-import { Landing, LandingText } from '../styles/pages/index';
+import { Landing, LandingText, HomeContent } from '../styles/pages/index';
 
 const IndexPage = () => {
   return (
@@ -14,6 +14,7 @@ const IndexPage = () => {
           <span>24 horas</span>
         </LandingText>
       </Landing>
+      <HomeContent>Início</HomeContent>
     </Layout>
   );
 };

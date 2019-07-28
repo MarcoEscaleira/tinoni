@@ -11,10 +11,11 @@ import { isLeapYear } from 'date-fns';
 
 const TopMessage = () => {
   const [visible, setVisible] = useState(true);
+  const [animation, setAnimation] = useState(false);
 
   return (
     visible && (
-      <MessageWrapper>
+      <MessageWrapper animate={animation}>
         <Time>
           <FontAwesomeIcon icon="clock" />
           24 <TimeSpan>&nbsp;horas</TimeSpan>
@@ -28,7 +29,12 @@ const TopMessage = () => {
             <FontAwesomeIcon icon="phone" />
           </span>
         </Title>
-        <CloseContainer onClick={() => setVisible(false)}>
+        <CloseContainer
+          onClick={() => {
+            setAnimation(true);
+            setTimeout(() => setVisible(false), 1000);
+          }}
+        >
           <FontAwesomeIcon icon="times" />
         </CloseContainer>
       </MessageWrapper>
