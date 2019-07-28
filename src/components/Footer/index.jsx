@@ -32,7 +32,11 @@ const Footer = () => {
         <PhoneWrapper>
           <PhoneNumber href="tel:+351913844344">913 844 344</PhoneNumber>
         </PhoneWrapper>
-        <FacebookLink>
+        <FacebookLink
+          href="https://www.facebook.com/tinoniesgotos"
+          target="_blank"
+          rel="noopener"
+        >
           <FontAwesomeIcon icon={['fab', 'facebook']} />
         </FacebookLink>
       </SocialWrapper>

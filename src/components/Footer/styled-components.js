@@ -98,10 +98,7 @@ export const PhoneNumber = styled.a.attrs(({ href }) => ({
   }
 `;
 
-export const FacebookLink = styled.a.attrs(() => ({
-  href: 'https://www.facebook.com/tinoniesgotos',
-  target: '_blank',
-}))`
+export const FacebookLink = styled.a`
   cursor: pointer;
   color: #54585a;
 
