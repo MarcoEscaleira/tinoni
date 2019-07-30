@@ -21,7 +21,7 @@ export const MessageWrapper = styled.section`
 
   @media (min-width: 50rem) {
     flex-direction: row;
-    height: 4.5rem;
+    min-height: 5rem;
   }
 `;
 
