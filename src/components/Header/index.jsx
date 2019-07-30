@@ -21,13 +21,16 @@ const Header = () => {
 
   return (
     <Fragment>
-      <TopMessage />
       <HeaderWrapper>
         <LogoWrapper>
           <LogoLink to="/">
             <Logo src={logoPath} />
           </LogoLink>
         </LogoWrapper>
+        <TopMessage />
+        <ShowMenu onClick={() => setResponsive(true)}>
+          <FontAwesomeIcon icon="align-justify" />
+        </ShowMenu>
         <Navigation>
           <Menu responsive={responsive}>
             {MenuPages.map(page => (
@@ -39,9 +42,6 @@ const Header = () => {
               <FontAwesomeIcon icon="times" />
             </HideMenu>
           </Menu>
-          <ShowMenu onClick={() => setResponsive(true)}>
-            <FontAwesomeIcon icon="align-justify" />
-          </ShowMenu>
         </Navigation>
       </HeaderWrapper>
     </Fragment>

@@ -2,29 +2,31 @@ import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
-const headerDesktopHeight = '6rem';
-const headerMobileHeight = '5rem';
+const headerDesktopHeight = '23rem';
+const headerMobileHeight = '18rem';
 
 const responsiveButtonStyles = css`
   background-color: transparent;
   border: none;
   transition: 0.4s;
-  font-size: 30px;
+  font-size: 3rem;
   align-items: center;
   cursor: pointer;
   display: flex;
 `;
 
 export const HeaderWrapper = styled.header`
+  position: relative;
   display: flex;
   justify-content: space-between;
-  padding: 0 1.5rem;
+  flex-direction: column;
   width: 100%;
+  flex-basis: ${headerMobileHeight};
   height: ${headerMobileHeight};
   box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.2);
 
   @media (min-width: 52rem) {
-    height: ${headerDesktopHeight};
+    flex-basis: ${headerDesktopHeight};
   }
 `;
 
@@ -35,7 +37,6 @@ export const LogoWrapper = styled.div`
 
   @media (max-width: 52rem) {
     flex: 1;
-    padding-left: 2.6rem;
   }
 `;
 
@@ -50,18 +51,19 @@ export const LogoLink = styled(AniLink).attrs(({ to }) => ({
 export const Logo = styled.img.attrs(({ src }) => ({
   src,
 }))`
-  width: 5.4rem;
-  height: 4.6rem;
+  width: 12.8rem;
+  height: 11.2rem;
+  margin: 1rem 0;
 
   @media (min-width: 52rem) {
-    width: 6rem;
-    height: 5.6rem;
+    width: 12rem;
+    height: 11.2rem;
   }
 `;
 
 export const Navigation = styled.nav`
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 
   @media (min-width: 52rem) {
     flex: 1;
@@ -71,6 +73,9 @@ export const Navigation = styled.nav`
 export const ShowMenu = styled.button`
   ${responsiveButtonStyles};
   color: #54585a;
+  position: absolute;
+  top: 1rem;
+  right: 1.3rem;
 
   &:hover {
     color: #fe5000;
@@ -99,7 +104,6 @@ export const HideMenu = styled.button`
 
 export const Menu = styled.ul`
   display: flex;
-  max-width: 70rem;
   flex: 1;
   justify-content: space-evenly;
   font-family: 'Lato', sans-serif;
@@ -120,8 +124,7 @@ export const Menu = styled.ul`
   }
 `;
 
-export const MenuLink = styled(Link).attrs(({ to }) => ({
-  to,
+export const MenuLink = styled(Link).attrs(() => ({
   activeStyle: {
     borderBottom: '0.3rem solid #FE5000',
   },
@@ -131,6 +134,8 @@ export const MenuLink = styled(Link).attrs(({ to }) => ({
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   flex: 1;
+  min-height: 6rem;
+  max-height: 6rem;
   display: flex;
   align-items: flex-end;
   padding-bottom: 1rem;

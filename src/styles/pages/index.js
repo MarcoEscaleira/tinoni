@@ -1,9 +1,9 @@
 import styled, { keyframes } from 'styled-components';
-import { slideInDown } from 'react-animations';
+import { slideInLeft } from 'react-animations';
 
 import homePath from '../../images/homepage.jpg';
 
-const slideInDownAnimation = keyframes`${slideInDown}`;
+const slideInLeftAnimation = keyframes`${slideInLeft}`;
 
 export const Landing = styled.section`
   margin: -1rem -1rem 0;
@@ -20,7 +20,7 @@ export const Landing = styled.section`
     height: 15rem;
     background: url(${homePath}) center no-repeat;
     background-size: cover;
-    filter: blur(1.5px);
+    filter: blur(2px);
   }
 
   @media (min-width: 45rem) {
@@ -33,10 +33,10 @@ export const Landing = styled.section`
 export const LandingText = styled.p`
   position: absolute;
   z-index: 2;
-  animation: 1s ${slideInDownAnimation};
+  animation: 1s ${slideInLeftAnimation};
   font-family: 'Roboto', Arial, sans-serif;
   font-weight: 300;
-  font-size: 2.5rem;
+  font-size: 3rem;
   text-shadow: 0 0 3px rgba(0, 0, 0, 1);
   color: #fff;
   text-align: center;
@@ -47,7 +47,7 @@ export const LandingText = styled.p`
   }
 
   @media (min-width: 45rem) {
-    font-size: 4.5rem;
+    font-size: 5.5rem;
   }
 `;
 
