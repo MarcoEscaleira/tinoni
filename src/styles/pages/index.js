@@ -19,7 +19,7 @@ export const Landing = styled.section`
     content: '';
     z-index: 1;
     width: 110%;
-    height: 15rem;
+    height: 16rem;
     background: url(${homePath}) center no-repeat;
     background-size: cover;
     filter: blur(2px);
@@ -29,7 +29,7 @@ export const Landing = styled.section`
     margin-bottom: 5rem;
 
     &::before {
-      height: 30rem;
+      height: 26rem;
     }
   }
 `;

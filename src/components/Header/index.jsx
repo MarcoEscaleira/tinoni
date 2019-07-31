@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import logoPath from '../../images/logo.png';
+import logoPath from '../../images/logoFlat.png';
 import TopMessage from '../TopMessage';
 
 import {

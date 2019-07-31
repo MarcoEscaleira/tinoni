@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
-const headerDesktopHeight = '24rem';
+const headerDesktopHeight = '27rem';
 const headerMobileHeight = '18rem';
 
 const responsiveButtonStyles = css`
@@ -49,13 +49,17 @@ export const LogoLink = styled(AniLink).attrs(({ to }) => ({
 `;
 
 export const Logo = styled.img`
-  width: 12.8rem;
-  height: 11.2rem;
-  margin: 1rem 0;
+  /* width: 12.8rem;
+  height: 11.2rem; 
+  margin: 1rem 0; */
+  width: 30rem;
+  height: 12rem;
 
   @media (min-width: 52rem) {
-    width: 12rem;
-    height: 11.2rem;
+    /* width: 12rem;
+    height: 11.2rem; */
+    width: 46rem;
+    height: 16rem;
   }
 `;
 
