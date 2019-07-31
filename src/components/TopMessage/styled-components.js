@@ -29,6 +29,7 @@ export const Title = styled.a`
   display: flex;
   align-items: center;
   color: #fff;
+  font-family: 'Lato', Arial, sans-serif;
   font-size: 1.8rem;
   text-transform: uppercase;
 
