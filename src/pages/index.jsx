@@ -48,12 +48,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Início" />
-      <Landing>
-        <LandingText>
-          Desentupimentos <br />
-          <span>24 horas</span>
-        </LandingText>
-      </Landing>
+      <Landing />
       <HomeContent>
         {cards.map(({ src, alt, title, description, btnText, to }) => (
           <Card key={alt}>

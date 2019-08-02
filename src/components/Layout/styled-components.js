@@ -18,6 +18,8 @@ export const MainContainer = styled.div`
 
 export const Content = styled.main`
   width: 100%;
+  max-width: 120rem;
+  align-self: center;
   flex: 1;
   padding: 1rem;
   position: relative;

@@ -19,10 +19,10 @@ export const Landing = styled.section`
     content: '';
     z-index: 1;
     width: 110%;
-    height: 20rem;
+    height: 24rem;
     background: url(${vansPath}) center no-repeat;
     background-size: 100% 100%;
-    filter: blur(2px);
+    filter: blur(0);
   }
 
   @media (min-width: 45rem) {

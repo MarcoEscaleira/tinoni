@@ -50,7 +50,7 @@ export const LogoLink = styled(AniLink).attrs(({ to }) => ({
 
 export const Logo = styled.img`
   /* width: 12.8rem;
-  height: 11.2rem; 
+  height: 11.2rem;
   margin: 1rem 0; */
   width: 30rem;
   height: 12rem;
@@ -58,6 +58,7 @@ export const Logo = styled.img`
   @media (min-width: 52rem) {
     /* width: 12rem;
     height: 11.2rem; */
+    padding-top: 1rem;
     width: 46rem;
     height: 16rem;
   }
@@ -107,6 +108,7 @@ export const HideMenu = styled.button`
 export const Menu = styled.ul`
   display: flex;
   flex: 1;
+  max-width: 120rem;
   justify-content: space-evenly;
   font-family: 'Lato', sans-serif;
 
