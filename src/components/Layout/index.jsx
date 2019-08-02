@@ -15,6 +15,7 @@ import {
   faClock,
   faChevronLeft,
   faChevronRight,
+  faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons';
 import { faCalendar } from '@fortawesome/free-regular-svg-icons';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
@@ -27,7 +28,8 @@ library.add(
   faClock,
   faCalendar,
   faChevronLeft,
-  faChevronRight
+  faChevronRight,
+  faPaperPlane
 );
 
 const Layout = ({ children }) => (

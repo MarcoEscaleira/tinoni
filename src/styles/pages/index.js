@@ -51,7 +51,7 @@ export const LandingText = styled.p`
     font-weight: 700;
   }
 
-  @media (min-width: 45rem) {
+  @media (min-width: 56rem) {
     font-size: 5.5rem;
   }
 `;
@@ -82,7 +82,7 @@ export const CardImage = styled.img`
   border-radius: 8rem 1rem 1rem 1rem;
   object-fit: cover;
 
-  @media (min-width: 45rem) {
+  @media (min-width: 56rem) {
     max-width: 24rem;
   }
 `;
@@ -103,7 +103,7 @@ export const CardContentTitle = styled.span`
   color: #ff9f58;
   margin-bottom: 1rem;
 
-  @media (min-width: 45rem) {
+  @media (min-width: 56rem) {
     font-size: 2.4rem;
   }
 `;
@@ -117,7 +117,7 @@ export const CardContentDescription = styled.p`
   padding: 0 1rem;
   word-break: break-all;
 
-  @media (min-width: 45rem) {
+  @media (min-width: 56rem) {
     font-size: 1.2rem;
   }
 `;
@@ -146,7 +146,7 @@ export const CardContentBtn = styled(Link)`
     background-position: right;
   }
 
-  @media (min-width: 45rem) {
+  @media (min-width: 56rem) {
     width: 4rem;
     height: 4rem;
     font-size: 2.6rem;
