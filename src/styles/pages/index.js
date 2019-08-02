@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components';
 import { Link } from 'gatsby';
 import { slideInLeft } from 'react-animations';
 
-import homePath from '../../images/homepage.jpg';
+import vansPath from '../../images/vans.jpeg';
 
 const slideInLeftAnimation = keyframes`${slideInLeft}`;
 
@@ -19,9 +19,9 @@ export const Landing = styled.section`
     content: '';
     z-index: 1;
     width: 110%;
-    height: 16rem;
-    background: url(${homePath}) center no-repeat;
-    background-size: cover;
+    height: 20rem;
+    background: url(${vansPath}) center no-repeat;
+    background-size: 100% 100%;
     filter: blur(2px);
   }
 
@@ -29,7 +29,7 @@ export const Landing = styled.section`
     margin-bottom: 5rem;
 
     &::before {
-      height: 26rem;
+      height: 50rem;
     }
   }
 `;

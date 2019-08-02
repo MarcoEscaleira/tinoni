@@ -99,6 +99,7 @@ const inputCss = css`
   border: none;
   outline: none;
 
+  /* stylelint-disable-next-line */
   &:focus + ${LabelName} ${ContentName}, &:valid + ${LabelName} ${ContentName} {
     transform: translateY(${({ textarea }) => (textarea ? '-700%' : '-150%')});
     font-size: 1.4rem;
@@ -106,6 +107,7 @@ const inputCss = css`
     color: #fe5000;
   }
 
+  /* stylelint-disable-next-line */
   &:focus + ${LabelName}::after, &:valid + ${LabelName}::after {
     transform: translateX(0%);
   }
