@@ -62,6 +62,7 @@ export const HomeContent = styled.section`
   flex: 1;
   flex-flow: row wrap;
   justify-content: space-evenly;
+  padding: 0 1rem;
 `;
 
 export const Card = styled.article`
@@ -79,7 +80,7 @@ export const Card = styled.article`
 
 export const CardImage = styled.img`
   max-width: 16rem;
-  border-radius: 8rem 1rem 1rem 1rem;
+  border-radius: 7rem 0.5rem 0.5rem;
   object-fit: cover;
 
   @media (min-width: 56rem) {

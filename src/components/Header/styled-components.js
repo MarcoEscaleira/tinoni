@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const headerDesktopHeight = '27rem';
-const headerMobileHeight = '18rem';
+const headerMobileHeight = '17rem';
 
 const responsiveButtonStyles = css`
   background-color: transparent;
@@ -53,7 +53,7 @@ export const Logo = styled.img`
   height: 11.2rem;
   margin: 1rem 0; */
   width: 30rem;
-  height: 12rem;
+  height: 11rem;
 
   @media (min-width: 52rem) {
     /* width: 12rem;
