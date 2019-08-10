@@ -16,30 +16,46 @@ import {
 } from '../styles/pages/index';
 
 // Imports for cards
-import homePath from '../images/homepage.jpg';
-import holePath from '../images/hole.jpg';
-import vanPath from '../images/van.jpg';
+import desentupimentosPath from '../images/mangueiraDesentupimento1.jpeg';
+import bombagemPath from '../images/bombagem.jpeg';
+import canalizacaoPath from '../images/canalizacao.jpeg';
+import chaminesPath from '../images/chamines2.jpeg';
+import pequenasReparacoesPath from '../images/pequenasReparacoes2.jpeg';
 
 const cards = [
   {
-    src: holePath,
-    alt: 'hole',
-    title: 'Serviços de Desentupimentos',
-    description: 'Desentupimentos mecânicos, tradicionais e eletrónicos.',
+    src: desentupimentosPath,
+    alt: 'desentupimentos',
+    title: 'Desentupimentos',
+    description: 'Serviço de desentupimentos de todos os tipos.',
     to: '/services',
   },
   {
-    src: homePath,
-    alt: 'home',
-    title: 'Serviços de Desentupimentos',
-    description: 'Desentupimentos mecânicos, tradicionais e eletrónicos.',
+    src: bombagemPath,
+    alt: 'bombagem',
+    title: 'Bombagem',
+    description: 'Serviços de bombagem especializados.',
     to: '/services',
   },
   {
-    src: vanPath,
-    alt: 'van',
-    title: 'Serviços de Desentupimentos',
-    description: 'Desentupimentos mecânicos, tradicionais e eletrónicos.',
+    src: canalizacaoPath,
+    alt: 'canalizacao',
+    title: 'Canalização',
+    description: 'Serviços de canalização.',
+    to: '/services',
+  },
+  {
+    src: chaminesPath,
+    alt: 'chamines',
+    title: 'Chaminés',
+    description: 'Serviços de chaminés.',
+    to: '/services',
+  },
+  {
+    src: pequenasReparacoesPath,
+    alt: 'pequenas reparacoes',
+    title: 'Pequenas reparacoes',
+    description: 'Serviços de todo o tipo de pequenas reparações.',
     to: '/services',
   },
 ];
@@ -48,7 +64,11 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Início" />
-      <Landing />
+      <Landing>
+        <LandingText>
+          <span>24</span> Horas
+        </LandingText>
+      </Landing>
       <HomeContent>
         {cards.map(({ src, alt, title, description, btnText, to }) => (
           <Card key={alt}>

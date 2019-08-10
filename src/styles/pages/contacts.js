@@ -4,16 +4,33 @@ const FORM_WIDTH = '46rem';
 
 export const Container = styled.div`
   width: 100%;
-  min-height: 100%;
+  height: 48.4rem;
   flex-grow: 1;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
 
+export const ImageWrapper = styled.div`
+  flex: 1;
+  height: 100%;
+  display: flex;
+`;
+
+export const Image = styled.img`
+  object-fit: 50%;
+  width: 100%;
+  border-radius: 1rem;
+`;
+
+export const FormWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex: 1;
+`;
+
 export const Title = styled.h2`
-  margin: 1rem 0;
   letter-spacing: 0.1rem;
   font-size: 3rem;
   font-family: 'Lato', Arial, sans-serif;
@@ -27,6 +44,7 @@ export const Title = styled.h2`
   line-height: 6rem;
   text-align: center;
   transition: 0.5s ease;
+  border-radius: 1rem 1rem 0 0;
 
   &:hover {
     background-position: right;

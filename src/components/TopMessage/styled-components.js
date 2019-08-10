@@ -1,7 +1,8 @@
 import styled, { css, keyframes } from 'styled-components';
-import { slideInRight, slideOutUp } from 'react-animations';
+import { slideInRight, slideInLeft, slideOutUp } from 'react-animations';
 
-const slideInAnimation = keyframes`${slideInRight}`;
+const slideInRightAnimation = keyframes`${slideInRight}`;
+const slideInLeftAnimation = keyframes`${slideInLeft}`;
 const rollOutAnimation = keyframes`${slideOutUp}`;
 
 export const MessageWrapper = styled.section`
@@ -32,11 +33,12 @@ export const Title = styled.a`
   font-family: 'Lato', Arial, sans-serif;
   font-size: 1.8rem;
   text-transform: uppercase;
+  animation: 1s ${slideInLeftAnimation};
 
   > span {
     padding-left: 1rem;
     font-size: 2rem;
-    animation: 1s ${slideInAnimation};
+    animation: 1s ${slideInRightAnimation};
   }
 
   &:hover {

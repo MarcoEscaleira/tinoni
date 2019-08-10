@@ -108,7 +108,7 @@ export const HideMenu = styled.button`
 export const Menu = styled.ul`
   display: flex;
   flex: 1;
-  max-width: 120rem;
+  max-width: 100rem;
   justify-content: space-evenly;
   font-family: 'Lato', sans-serif;
 

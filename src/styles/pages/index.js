@@ -1,10 +1,10 @@
 import styled, { keyframes } from 'styled-components';
 import { Link } from 'gatsby';
-import { slideInLeft } from 'react-animations';
+import { slideInRight } from 'react-animations';
 
 import vansPath from '../../images/vans.jpeg';
 
-const slideInLeftAnimation = keyframes`${slideInLeft}`;
+const slideInRightAnimation = keyframes`${slideInRight}`;
 
 export const Landing = styled.section`
   margin: -1rem -1rem 0;
@@ -22,7 +22,7 @@ export const Landing = styled.section`
     height: 24rem;
     background: url(${vansPath}) center no-repeat;
     background-size: 100% 100%;
-    filter: blur(0);
+    filter: blur(1px);
   }
 
   @media (min-width: 45rem) {
@@ -37,11 +37,10 @@ export const Landing = styled.section`
 export const LandingText = styled.p`
   position: absolute;
   z-index: 2;
-  animation: 1s ${slideInLeftAnimation};
+  animation: 1s ${slideInRightAnimation};
   font-family: 'Roboto', Arial, sans-serif;
   font-weight: 300;
-  font-size: 3rem;
-  letter-spacing: 0.1rem;
+  font-size: 6rem;
   text-shadow: 0 0 3px rgba(0, 0, 0, 1);
   color: #fff;
   text-align: center;
@@ -52,7 +51,7 @@ export const LandingText = styled.p`
   }
 
   @media (min-width: 56rem) {
-    font-size: 5.5rem;
+    font-size: 9rem;
   }
 `;
 
@@ -69,7 +68,7 @@ export const Card = styled.article`
   position: relative;
   box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.2);
   border-radius: 8rem 1rem 10rem 1rem;
-  max-width: 52rem;
+  width: 46rem;
   display: flex;
   flex-direction: row;
   height: 18rem;
