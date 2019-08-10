@@ -40,10 +40,9 @@ export const LogoWrapper = styled.div`
   }
 `;
 
-export const LogoLink = styled(AniLink).attrs(({ to }) => ({
+export const LogoLink = styled(AniLink).attrs(() => ({
   paintDrip: true,
   hex: '#fe5000',
-  to,
 }))`
   outline: none;
 `;
@@ -52,7 +51,7 @@ export const Logo = styled.img`
   /* width: 12.8rem;
   height: 11.2rem;
   margin: 1rem 0; */
-  width: 30rem;
+  width: 28rem;
   height: 11rem;
 
   @media (min-width: 52rem) {

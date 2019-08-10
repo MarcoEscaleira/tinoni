@@ -40,7 +40,7 @@ export const LandingText = styled.p`
   animation: 1s ${slideInRightAnimation};
   font-family: 'Roboto', Arial, sans-serif;
   font-weight: 300;
-  font-size: 6rem;
+  font-size: 4.6rem;
   text-shadow: 0 0 3px rgba(0, 0, 0, 1);
   color: #fff;
   text-align: center;
@@ -51,7 +51,7 @@ export const LandingText = styled.p`
   }
 
   @media (min-width: 56rem) {
-    font-size: 9rem;
+    font-size: 7.6rem;
   }
 `;
 
@@ -89,11 +89,16 @@ export const CardImage = styled.img`
 
 export const CardContent = styled.div`
   display: flex;
-  flex-grow: 1;
+  flex: 1;
   align-items: center;
-  padding: 0 1rem;
+  max-width: 15.5rem;
+  padding: 0 0 0 1rem;
   flex-direction: column;
   font-family: 'Lato', Arial, sans-serif;
+
+  @media (min-width: 45rem) {
+    max-width: 100%;
+  }
 `;
 
 export const CardContentTitle = styled.span`

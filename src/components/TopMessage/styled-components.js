@@ -3,7 +3,6 @@ import { slideInRight, slideInLeft, slideOutUp } from 'react-animations';
 
 const slideInRightAnimation = keyframes`${slideInRight}`;
 const slideInLeftAnimation = keyframes`${slideInLeft}`;
-const rollOutAnimation = keyframes`${slideOutUp}`;
 
 export const MessageWrapper = styled.section`
   position: relative;
@@ -14,11 +13,6 @@ export const MessageWrapper = styled.section`
   width: 100%;
   min-height: 4rem;
   background-color: #fe5000;
-  ${({ animate }) =>
-    animate &&
-    css`
-      animation: 1s ${rollOutAnimation};
-    `}
 
   @media (min-width: 50rem) {
     flex-direction: row;

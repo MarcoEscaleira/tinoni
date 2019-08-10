@@ -4,30 +4,63 @@ const FORM_WIDTH = '46rem';
 
 export const Container = styled.div`
   width: 100%;
-  height: 48.4rem;
+  min-height: 48.4rem;
   flex-grow: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 1.2rem;
+
+  @media (min-width: 46rem) {
+    padding-top: 2.4rem;
+  }
+
+  @media (min-width: 62rem) {
+    height: 48.4rem;
+    padding: 0;
+    flex-direction: row;
+  }
 `;
 
 export const ImageWrapper = styled.div`
   flex: 1;
+  width: 100%;
   height: 100%;
   display: flex;
+  justify-content: center;
+  margin-bottom: 2.6rem;
+  padding-right: 0;
+
+  @media (min-width: 62rem) {
+    margin-bottom: 0;
+    padding-right: 4rem;
+  }
 `;
 
 export const Image = styled.img`
   object-fit: 50%;
-  width: 100%;
+  max-width: 35.5rem;
   border-radius: 1rem;
+
+  @media (min-width: 62rem) {
+    min-width: 100%;
+  }
 `;
 
 export const FormWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  width: 100%;
+  max-width: 35.5rem;
   flex: 1;
+  margin-bottom: 2.6rem;
+
+  @media (min-width: 62rem) {
+    margin-bottom: 0;
+    align-items: flex-end;
+  }
 `;
 
 export const Title = styled.h2`
@@ -45,13 +78,14 @@ export const Title = styled.h2`
   text-align: center;
   transition: 0.5s ease;
   border-radius: 1rem 1rem 0 0;
+  margin-bottom: 0.6rem;
 
   &:hover {
     background-position: right;
   }
 
   @media (min-width: 45rem) {
-    width: 100%;
+    margin-bottom: 0;
   }
 `;
 
@@ -74,7 +108,7 @@ export const FormInput = styled.div`
   width: 90%;
   margin-bottom: 2rem;
 
-  @media (min-width: 45rem) {
+  @media (min-width: 62rem) {
     width: 100%;
   }
 `;
@@ -162,7 +196,7 @@ export const Submit = styled.button`
     background-position: right;
   }
 
-  @media (min-width: 45rem) {
+  @media (min-width: 62rem) {
     width: 6rem;
     height: 6rem;
     font-size: 2.6rem;
