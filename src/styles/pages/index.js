@@ -96,7 +96,7 @@ export const CardContent = styled.div`
   display: flex;
   flex: 1;
   align-items: center;
-  max-width: 15.5rem;
+  width: 18rem;
   flex-direction: column;
   font-family: 'Lato', Arial, sans-serif;
 
