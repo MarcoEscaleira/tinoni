@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   flex: 1;
-  margin: -1rem -1rem 0;
+  margin: -1rem -1rem -1rem;
 `;
 
 export const Service = styled.section`
@@ -38,6 +38,10 @@ export const Service = styled.section`
 export const ServiceContent = styled.div`
   position: absolute;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const ServiceTitle = styled.p`
@@ -59,6 +63,7 @@ export const ServiceDescription = styled.ul`
   font-size: 1.4rem;
   text-align: center;
   list-style: none;
+  max-width: 27rem;
 `;
 
 export const ServiceType = styled.li`

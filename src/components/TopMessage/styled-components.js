@@ -1,5 +1,5 @@
-import styled, { css, keyframes } from 'styled-components';
-import { slideInRight, slideInLeft, slideOutUp } from 'react-animations';
+import styled, { keyframes } from 'styled-components';
+import { slideInRight, slideInLeft } from 'react-animations';
 
 const slideInRightAnimation = keyframes`${slideInRight}`;
 const slideInLeftAnimation = keyframes`${slideInLeft}`;
