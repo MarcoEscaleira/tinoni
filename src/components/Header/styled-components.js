@@ -109,7 +109,6 @@ export const Menu = styled.ul`
   display: flex;
   flex: 1;
   max-width: 110rem;
-  max-height: 66.7rem;
   justify-content: space-evenly;
   font-family: 'Lato', sans-serif;
 

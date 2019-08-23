@@ -60,8 +60,12 @@ export const HomeContent = styled.section`
   display: flex;
   flex: 1;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 1rem;
+
+  @media (min-width: 64rem) {
+    justify-content: space-between;
+  }
 `;
 
 export const Card = styled.article`
@@ -88,6 +92,7 @@ export const CardImage = styled.img`
 `;
 
 export const CardContent = styled.div`
+  margin: 0 auto;
   display: flex;
   flex: 1;
   align-items: center;
