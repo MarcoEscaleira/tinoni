@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   flex: 1;
   margin: -1rem -1rem -1rem;
 `;
@@ -15,7 +15,7 @@ export const Service = styled.section`
   align-items: center;
   color: #fff;
 
-  &::before {
+  &::after {
     content: '';
     z-index: 1;
     width: 110%;
@@ -27,9 +27,8 @@ export const Service = styled.section`
   }
 
   @media (min-width: 45rem) {
-    margin-bottom: 5rem;
-
-    &::before {
+    &::after {
+      max-width: 62rem;
       height: 50rem;
     }
   }
@@ -47,23 +46,29 @@ export const ServiceContent = styled.div`
 export const ServiceTitle = styled.p`
   font-family: 'Lato', Arial, sans-serif;
   font-weight: 700;
-  font-size: 4.6rem;
+  font-size: 4rem;
   text-shadow: 0 0 3px rgba(0, 0, 0, 1);
   text-align: center;
   word-wrap: break-word;
+  width: 32rem;
   margin-bottom: 3rem;
 
   @media (min-width: 56rem) {
-    font-size: 7.6rem;
-    margin-bottom: 4rem;
+    width: 55rem;
+    font-size: 7rem;
   }
 `;
 
 export const ServiceDescription = styled.ul`
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 1);
   text-align: center;
   list-style: none;
   max-width: 27rem;
+
+  @media (min-width: 56rem) {
+    max-width: 32rem;
+  }
 `;
 
 export const ServiceType = styled.li`

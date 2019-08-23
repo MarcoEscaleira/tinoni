@@ -18,7 +18,7 @@ export const MainContainer = styled.div`
 
 export const Content = styled.main`
   width: 100%;
-  max-width: 100rem;
+  max-width: 110rem;
   align-self: center;
   flex: 1;
   padding: 1rem;

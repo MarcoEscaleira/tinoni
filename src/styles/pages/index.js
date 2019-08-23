@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
-import { Link } from 'gatsby';
 import { slideInRight } from 'react-animations';
+import { Link } from 'gatsby';
 
 import vansPath from '../../images/vans.jpeg';
 
@@ -60,7 +60,7 @@ export const HomeContent = styled.section`
   display: flex;
   flex: 1;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 0 1rem;
 `;
 
@@ -78,7 +78,7 @@ export const Card = styled.article`
 `;
 
 export const CardImage = styled.img`
-  max-width: 16rem;
+  max-width: 14rem;
   border-radius: 7rem 0.5rem 0.5rem;
   object-fit: cover;
 
@@ -92,7 +92,6 @@ export const CardContent = styled.div`
   flex: 1;
   align-items: center;
   max-width: 15.5rem;
-  padding: 0 0 0 1rem;
   flex-direction: column;
   font-family: 'Lato', Arial, sans-serif;
 
@@ -106,6 +105,7 @@ export const CardContentTitle = styled.span`
   font-weight: 700;
   text-align: center;
   color: #ff9f58;
+  padding-left: 1rem;
   margin-bottom: 1rem;
 
   @media (min-width: 56rem) {
@@ -119,7 +119,7 @@ export const CardContentDescription = styled.p`
   letter-spacing: 0.1rem;
   line-height: 1.5;
   color: #777;
-  padding: 0 1rem;
+  padding-left: 1rem;
   word-break: break-all;
 
   @media (min-width: 56rem) {
