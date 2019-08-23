@@ -24,6 +24,7 @@ export const HeaderWrapper = styled.header`
   flex-basis: ${headerMobileHeight};
   height: ${headerMobileHeight};
   box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.2);
+  z-index: 100;
 
   @media (min-width: 52rem) {
     flex-basis: ${headerDesktopHeight};

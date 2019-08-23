@@ -13,7 +13,6 @@ export const Landing = styled.section`
   margin-bottom: 3rem;
   align-items: center;
   box-sizing: border-box;
-  box-shadow: inset 0px -5px 11px 1px rgba(0, 0, 0, 0.3);
 
   &::before {
     content: '';
@@ -23,6 +22,7 @@ export const Landing = styled.section`
     background: url(${vansPath}) center no-repeat;
     background-size: 100% 100%;
     filter: blur(1px);
+    box-shadow: inset 0px -5px 11px 1px rgba(0, 0, 0, 0.2);
   }
 
   @media (min-width: 45rem) {

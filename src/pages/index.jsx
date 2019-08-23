@@ -21,6 +21,7 @@ import bombagemPath from '../images/bombagem.jpeg';
 import canalizacaoPath from '../images/canalizacao.jpeg';
 import chaminesPath from '../images/chamines2.jpeg';
 import pequenasReparacoesPath from '../images/pequenasReparacoes2.jpeg';
+import limpezaPath from '../images/limpeza1.jpeg';
 
 const cards = [
   {
@@ -57,6 +58,13 @@ const cards = [
     title: 'Pequenas reparacoes',
     description: 'Serviços de todo o tipo de pequenas reparações.',
     to: '/services',
+  },
+  {
+    src: limpezaPath,
+    alt: 'limpeza',
+    title: 'Limpeza',
+    description: 'Serviços de limpeza.',
+    to: '/services#limpeza',
   },
 ];
 
