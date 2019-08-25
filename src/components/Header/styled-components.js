@@ -46,6 +46,10 @@ export const LogoLink = styled(AniLink).attrs(() => ({
   hex: '#fe5000',
 }))`
   outline: none;
+
+  @media (min-width: 52rem) {
+    padding-top: 1rem;
+  }
 `;
 
 export const Logo = styled.img`

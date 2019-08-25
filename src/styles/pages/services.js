@@ -18,7 +18,7 @@ export const Service = styled.section`
   &::after {
     content: '';
     z-index: 1;
-    width: 110%;
+    width: 100%;
     height: 40rem;
     background: url(${({ src }) => src}) center no-repeat;
     background-size: 100% 100%;
@@ -28,7 +28,7 @@ export const Service = styled.section`
 
   @media (min-width: 45rem) {
     &::after {
-      max-width: 62rem;
+      max-width: 55rem;
       height: 50rem;
     }
   }

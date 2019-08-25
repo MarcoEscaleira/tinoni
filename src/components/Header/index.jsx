@@ -1,4 +1,6 @@
 import React, { Fragment, useState } from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logoPath from '../../images/logoFlat.png';
 import TopMessage from '../TopMessage';
@@ -18,13 +20,37 @@ import MenuPages from '../pages';
 
 const Header = () => {
   const [responsive, setResponsive] = useState(false);
+  const data = useStaticQuery(graphql`
+    query {
+      logoDesktop: file(relativePath: { eq: "logoFlat.png" }) {
+        childImageSharp {
+          fixed(width: 460, height: 160) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      logoMobile: file(relativePath: { eq: "logoFlat.png" }) {
+        childImageSharp {
+          fixed(width: 325, height: 115) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `);
 
   return (
     <Fragment>
       <HeaderWrapper>
         <LogoWrapper>
           <LogoLink to="/">
-            <Logo src={logoPath} />
+            <Img
+              fixed={
+                window.innerWidth <= 760
+                  ? data.logoMobile.childImageSharp.fixed
+                  : data.logoDesktop.childImageSharp.fixed
+              }
+            />
           </LogoLink>
         </LogoWrapper>
         <TopMessage />
