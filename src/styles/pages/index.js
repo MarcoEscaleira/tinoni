@@ -59,6 +59,14 @@ export const HomeContent = styled.section`
   position: relative;
   display: flex;
   flex: 1;
+  flex-flow: column nowrap;
+  align-items: center;
+`;
+
+export const CardsWrapper = styled.div`
+  position: relative;
+  display: flex;
+  flex: 1;
   flex-flow: row wrap;
   justify-content: center;
   padding: 0 1rem;
@@ -72,13 +80,17 @@ export const Card = styled.article`
   position: relative;
   box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.2);
   border-radius: 8rem 1rem 10rem 1rem;
-  width: 46rem;
+  width: 32rem;
   display: flex;
   flex-direction: row;
   height: 18rem;
   padding: 1rem;
   overflow: hidden;
   margin-bottom: 5rem;
+
+  @media (min-width: 64rem) {
+    width: 46rem;
+  }
 `;
 
 export const CardImage = styled.img`
@@ -163,5 +175,76 @@ export const CardContentBtn = styled(Link)`
     padding-left: 0.4rem;
     bottom: 1rem;
     right: 7rem;
+  }
+`;
+
+export const MapWrapper = styled.section`
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const MapTitle = styled.h1`
+  margin-top: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 2rem;
+
+  span {
+    color: #fe5000;
+    font-weight: bold;
+  }
+
+  @media (min-width: 45rem) {
+    font-size: 3rem;
+  }
+`;
+
+export const Map = styled.img`
+  border-radius: 1rem;
+  object-fit: cover;
+  width: 28rem;
+  height: 28rem;
+  margin-bottom: 1rem;
+
+  @media (min-width: 45rem) {
+    font-size: 3rem;
+    width: 50%;
+    height: 50%;
+    margin-bottom: 4rem;
+  }
+`;
+
+export const MapDescription = styled.ul`
+  font-size: 1.3rem;
+  list-style: none;
+  display: flex;
+  flex-flow: column nowrap;
+
+  @media (min-width: 45rem) {
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+`;
+
+export const MapDescriptionItem = styled.li`
+  svg {
+    color: #32cd32;
+    margin-right: 1rem;
+  }
+
+  color: #54585a;
+  margin-bottom: 1rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 45rem) {
+    margin: 0 1rem 1rem 0;
   }
 `;

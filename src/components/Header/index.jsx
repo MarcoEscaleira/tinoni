@@ -2,14 +2,12 @@ import React, { Fragment, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import logoPath from '../../images/logoFlat.png';
 import TopMessage from '../TopMessage';
 
 import {
   HeaderWrapper,
   LogoWrapper,
   LogoLink,
-  Logo,
   Navigation,
   ShowMenu,
   HideMenu,

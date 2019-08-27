@@ -7,12 +7,18 @@ import {
   Landing,
   LandingText,
   HomeContent,
+  CardsWrapper,
   Card,
   CardImage,
   CardContent,
   CardContentTitle,
   CardContentDescription,
   CardContentBtn,
+  MapWrapper,
+  MapTitle,
+  Map,
+  MapDescription,
+  MapDescriptionItem,
 } from '../styles/pages/index';
 
 // Imports for cards
@@ -22,6 +28,8 @@ import canalizacaoPath from '../images/canalizacao.jpeg';
 import chaminesPath from '../images/chamines2.jpeg';
 import pequenasReparacoesPath from '../images/pequenasReparacoes2.jpeg';
 import limpezaPath from '../images/limpeza1.jpeg';
+
+import mapPath from '../images/mapa.jpeg';
 
 const cards = [
   {
@@ -78,18 +86,51 @@ const IndexPage = () => {
         </LandingText>
       </Landing>
       <HomeContent>
-        {cards.map(({ src, alt, title, description, btnText, to }) => (
-          <Card key={alt}>
-            <CardImage src={src} alt={alt} />
-            <CardContent>
-              <CardContentTitle>{title}</CardContentTitle>
-              <CardContentDescription>{description}</CardContentDescription>
-              <CardContentBtn to={to}>
-                <FontAwesomeIcon icon="chevron-right" />
-              </CardContentBtn>
-            </CardContent>
-          </Card>
-        ))}
+        <CardsWrapper>
+          {cards.map(({ src, alt, title, description, btnText, to }) => (
+            <Card key={alt}>
+              <CardImage src={src} alt={alt} />
+              <CardContent>
+                <CardContentTitle>{title}</CardContentTitle>
+                <CardContentDescription>{description}</CardContentDescription>
+                <CardContentBtn to={to}>
+                  <FontAwesomeIcon icon="chevron-right" />
+                </CardContentBtn>
+              </CardContent>
+            </Card>
+          ))}
+        </CardsWrapper>
+        <MapWrapper>
+          <MapTitle>
+            Estamos em toda a zona do <span>grande Porto</span>
+          </MapTitle>
+          <Map src={mapPath} alt="mapa" />
+          <MapDescription>
+            {[
+              'Alfena',
+              'Espinho',
+              'Ermesinde',
+              'Gondomar',
+              'Maia',
+              'Matosinhos',
+              'Paços de Ferreira',
+              'Porto',
+              'Póvoa de Varzim',
+              'São Mamede de Infesta',
+              'Santo Tirso',
+              'Senhora da Hora',
+              'Trofa',
+              'Valongo',
+              'Vila do Conde',
+              'Vila Nova de Gaia',
+            ].map(item => (
+              <MapDescriptionItem key={item}>
+                <FontAwesomeIcon icon="check" />
+                {item}
+              </MapDescriptionItem>
+            ))}
+          </MapDescription>
+        </MapWrapper>
       </HomeContent>
     </Layout>
   );
