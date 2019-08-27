@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import window from 'global';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
