@@ -38,6 +38,11 @@ export const LogoWrapper = styled.div`
 
   @media (max-width: 52rem) {
     flex: 1;
+
+    img {
+      width: 46rem;
+      height: 16rem;
+    }
   }
 `;
 
@@ -49,6 +54,11 @@ export const LogoLink = styled(AniLink).attrs(() => ({
 
   @media (min-width: 52rem) {
     padding-top: 1rem;
+    width: 46rem;
+    height: 16rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -74,6 +84,7 @@ export const Navigation = styled.nav`
 
   @media (min-width: 52rem) {
     flex: 1;
+    max-height: 9rem;
   }
 `;
 

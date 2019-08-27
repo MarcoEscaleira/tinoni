@@ -21,13 +21,6 @@ const Header = () => {
   const [responsive, setResponsive] = useState(false);
   const data = useStaticQuery(graphql`
     query {
-      logoDesktop: file(relativePath: { eq: "logoFlat.png" }) {
-        childImageSharp {
-          fixed(width: 460, height: 160) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
       logoMobile: file(relativePath: { eq: "logoFlat.png" }) {
         childImageSharp {
           fixed(width: 325, height: 115) {
@@ -43,13 +36,7 @@ const Header = () => {
       <HeaderWrapper>
         <LogoWrapper>
           <LogoLink to="/">
-            <Img
-              fixed={
-                window.innerWidth <= 760
-                  ? data.logoMobile.childImageSharp.fixed
-                  : data.logoDesktop.childImageSharp.fixed
-              }
-            />
+            <Img fixed={data.logoMobile.childImageSharp.fixed} />
           </LogoLink>
         </LogoWrapper>
         <TopMessage />
